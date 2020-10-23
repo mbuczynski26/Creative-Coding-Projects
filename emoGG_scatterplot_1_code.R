@@ -1,3 +1,5 @@
+# load libraries 
+
 library(ggplot2)
 library(emoGG)
 
@@ -49,18 +51,37 @@ g2 + geom_smooth(                 # add "smooth" trending line
 
 ### Make Legend Table 
 
-# Note: to generate table, the below code must be in RMarkdown file (but in code chunk)
+# Note: to generate table, the below code must be in RMarkdown file (not in code chunk) and comments denoted by "#" need to be removed 
 
-\begin{table}[ht]
-\centering            # location of table 
-\begin{tabular}{|c | c| c|} # indicate the lines of the columns with "|" and the position of the data contents with "c" 
-\hline  # horizontal line
-Candy & Pumpkin & Ghost \\ # heading
+
+\begin{table}[ht]         
+
+# location of table with respect to page 
+\centering        
+
+# indicate the lines of the columns with "|" and the position of the data contents with "c" 
+\begin{tabular}{|c | c| c|} 
+
+# horizontal line
+\hline  
+
+# header
+Candy & Pumpkin & Ghost \\
+
 \hline 
-\includegraphics[width=1in, height=1.5in]{candy} & \includegraphics[width=1in, height=1.5in]{pumpkin} & \includegraphics[width=1in, height=2in]{ghost} \\ # table contents
+
+#table contents
+\includegraphics[width=1in, height=1.5in]{candy} & \includegraphics[width=1in, height=1.5in]{pumpkin} & \includegraphics[width=1in, height=2in]{ghost} \\ 
+
 \hline 
+
 \end{tabular}
-\caption{Emoji Type Legend.  Note: See Table 1 for corresponding graphic.} # caption 
-\label{legend_emo1}  # set label for cross referencing 
+
+# caption
+\caption{Emoji Type Legend. Note: See Table 1 for corresponding scatterplot.}  
+
+# set label for cross referencing 
+\label{legend_emo1}  
+
 \end{table}
 
