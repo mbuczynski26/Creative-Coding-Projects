@@ -6,8 +6,8 @@ Chrissy_S    Feb_12
 Dad          Feb_12
 Mom          Sep_01
 Magda_N      Sep_23
-Hannah_W     Sep_2
-Micaela_R    Mar_6
+Hannah_W     Sep_02
+Micaela_R    Mar_06
 Ryan_H       Feb_13
 Sarah_H      Feb_13
 Christina_S  Mar_29
@@ -16,24 +16,26 @@ Morgan_J     Aug_21
 Tia_Q        Apr_21
 Myrissa_D    Oct_13
 Maria_B      Mar_31
-Tressa_H     Jan_6
+Tressa_H     Jan_06
 Elizabeth_E  Sep_18
 Dana_M       Apr_22
 Hannah_S     May_20
-  
+Emilka       Mar_21
+Basia_B      Nov_08
+Colleen_M    Dec_30  
                              ')
-
 
 # run today's date and choose format 
 
 today_sys <- Sys.Date() # assign today's date to the variable "today" 
 today <- format(today_sys, format = "%b_%d")  # adjust date format 
 
+
 # loop that indicates name of person who has a birthday today.  No response is generated if no birthday occurs today
 
-  for (i in 1:dim(birthday_data)[1]) {               # for each iteration for rows 1 through x; x being the automatic calculation of the number of rows (minus the header)  
-    if(birthday_data$birthday[i] == today) {        # if the value in the "birthday" column is equal to the value of "today" 
-      print(birthday_data$name[i])                   # then the returned value will be the value in the "name" column that is associated with the ith observation from if the statement in the line above is TRUE  
+  for (i in 1:dim(birthday_data)[1]) {        # for each iteration for rows 1 through x; x being the automatic calculation of the number of rows (minus the header)  
+    if(birthday_data$birthday[i] == today) {  # if the value in the "birthday" column is equal to the value of "today" 
+      print(birthday_data$name[i])            # then the returned value will be the value in the "name" column that is associated with the ith observation from if the statement in the line above is TRUE  
     }                                                  
   }
 
@@ -85,8 +87,3 @@ library(dplyr)
 
 birthday_data %>% 
   filter(name == "NAME") # where NAME is the name of the person
-
-
-
-
-
